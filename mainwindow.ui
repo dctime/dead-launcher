@@ -25,11 +25,26 @@
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
-        <string>Tab 1</string>
+        <string>Longest Survival</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QTableWidget" name="tableWidget">
+         <widget class="QTableWidget" name="longestTableWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::Box</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
           <column>
            <property name="text">
             <string>Name</string>
@@ -46,14 +61,14 @@
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
-        <string>Tab 2</string>
+        <string>Fastest Win</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
          <widget class="QListWidget" name="listWidget">
           <item>
            <property name="text">
-            <string>Hello World</string>
+            <string>There are no winning condition rn</string>
            </property>
           </item>
          </widget>
@@ -78,7 +93,28 @@
        </spacer>
       </item>
       <item>
-       <widget class="QLineEdit" name="nameEdit"/>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Enter Your Name: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="nameEdit">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="errorMessageLabel">
+        <property name="styleSheet">
+         <string notr="true">color:rgb(192, 28, 40)</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
       </item>
       <item>
        <spacer name="horizontalSpacer_4">

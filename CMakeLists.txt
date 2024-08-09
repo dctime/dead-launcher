@@ -65,6 +65,9 @@ install(TARGETS dead-launcher
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
+target_link_libraries(dead-launcher PUBLIC mysqlcppconn)
+
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(dead-launcher)
 endif()
+
